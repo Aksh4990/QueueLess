@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore QueueLess, a campus canteen order-ahead concept demo.">
+  <title>QueueLess | Student ordering</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">Q</span><span>QueueLess<small>Campus pickup</small></span></a>
+    <nav aria-label="Main navigation">
+      <a class="active" href="index.html">Order food</a>
+      <a href="orders.html">My orders</a>
+      <a href="operator.html">Canteen view</a>
+    </nav>
+    <span class="campus-tag">VIT · Mumbai</span>
+  </header>
+  <main class="page-wrap">
+    <section class="hero">
+      <div><p class="eyebrow">A concept for campus breaks</p><h1>Order ahead.<br>Keep your break.</h1><p class="hero-copy">Choose a pickup window, place a demo order and see the journey from both sides of the counter.</p></div>
+      <div class="hero-note"><span class="pulse"></span><div><strong>Interactive proof of concept</strong><small>Sample menu · No real orders or payments</small></div></div>
+    </section>
+    <section class="quick-points" aria-label="How the concept works">
+      <div><b>01</b><span>Choose from a sample menu</span></div><div><b>02</b><span>Pick a convenient time</span></div><div><b>03</b><span>Follow pickup progress</span></div>
+    </section>
+    <div class="section-heading"><div><p class="eyebrow">Student experience</p><h2>Today's canteen menu</h2></div><span class="muted">Illustrative items and prices</span></div>
+    <div class="order-layout">
+      <section class="menu-area" aria-label="Menu">
+        <div class="menu-tools"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search the menu" aria-label="Search the menu"></label><div class="filters" id="filters" aria-label="Filter by category"></div></div>
+        <div class="menu-grid" id="menu-grid"></div>
+        <p class="note">Availability and prices are sample data for this concept demo.</p>
+      </section>
+      <aside class="cart-card" aria-labelledby="cart-title">
+        <div class="card-heading"><div><p class="eyebrow">Your break, planned</p><h2 id="cart-title">Pickup basket</h2></div><span class="badge" id="cart-count">0 items</span></div>
+        <div id="cart-empty" class="empty-state"><span class="empty-icon">＋</span><strong>Your basket is empty</strong><span>Add a sample item to begin.</span></div>
+        <div id="cart-lines" class="cart-lines"></div>
+        <div class="form-field"><label for="pickup">Pickup window</label><select id="pickup"><option value="12:40–12:50">12:40–12:50</option><option value="12:50–1:00">12:50–1:00</option><option value="1:00–1:10">1:00–1:10</option><option value="1:10–1:20">1:10–1:20</option></select><small>Choose a 10-minute collection window.</small></div>
+        <div class="form-field"><label for="student-name">Name for pickup <span class="muted">(optional)</span></label><input id="student-name" type="text" maxlength="40" placeholder="e.g. Aksha" autocomplete="off"></div>
+        <div class="total-row"><span>Sample total</span><strong id="cart-total">₹0</strong></div>
+        <button id="place-order" class="button primary full" disabled>Preview demo order</button>
+        <p class="fineprint">Your order stays in this browser. No payment is taken and nothing is sent to a canteen.</p>
+        <div id="order-confirmation" class="confirmation" role="status" aria-live="polite" hidden></div>
+      </aside>
+    </div>
+    <section class="insight-strip"><div class="insight-icon">✦</div><div><strong>Designed around the short-break rush</strong><p>The concept pairs a pickup window for students with a simple order queue for canteen staff.</p></div><a href="operator.html" class="text-link">See the canteen view →</a></section>
+  </main>
+  <footer class="footer"><span>QueueLess · Startup concept prototype</span><span>Sample data only · Built for exploration</span></footer>
+  <script src="scripts/data.js"></script><script src="scripts/store.js"></script><script src="scripts/student.js"></script>
+</body>
+</html>

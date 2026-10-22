@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Explore a sample canteen order queue and menu controls."><title>QueueLess | Canteen view</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+  <header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">Q</span><span>QueueLess<small>Campus pickup</small></span></a><nav aria-label="Main navigation"><a href="index.html">Order food</a><a href="orders.html">My orders</a><a class="active" href="operator.html">Canteen view</a></nav><span class="campus-tag">VIT · Mumbai</span></header>
+  <main class="page-wrap">
+    <section class="page-intro operator-intro"><div><p class="eyebrow">Canteen experience</p><h1>Order desk</h1><p>A lightweight view of incoming pickup requests and sample menu availability.</p></div><span class="demo-label"><i></i> DEMO MODE</span></section>
+    <section class="metrics" aria-label="Queue summary"><article><span>Active orders</span><strong id="active-count">0</strong><small>Awaiting collection</small></article><article><span>Preparing now</span><strong id="preparing-count">0</strong><small>Sample queue</small></article><article><span>Ready for pickup</span><strong id="ready-count">0</strong><small>Waiting at counter</small></article></section>
+    <section class="operator-grid">
+      <div class="panel"><div class="section-heading compact"><div><p class="eyebrow">Pickup workflow</p><h2>Incoming orders</h2></div><button class="button subtle small" id="clear-orders" type="button">Clear demo orders</button></div><div id="operator-orders" class="operator-orders"></div><div id="operator-empty" class="empty-panel compact-empty" hidden><div class="empty-icon">✓</div><h2>Queue is clear</h2><p>Place a demo order from the student menu to see it appear here.</p><a href="index.html" class="text-link">Open student menu →</a></div></div>
+      <aside class="panel menu-manager"><div class="section-heading compact"><div><p class="eyebrow">Menu controls</p><h2>Sample availability</h2></div></div><p class="muted">Toggle an item to see how a canteen could mark it unavailable. This setting is shared with the student menu in this browser.</p><div id="availability-list" class="availability-list"></div></aside>
+    </section>
+    <section class="workflow-note"><strong>Concept workflow</strong><div><span>Order received</span><b>→</b><span>Preparing</span><b>→</b><span>Ready for pickup</span><b>→</b><span>Collected</span></div><p>This interface explores a possible staff workflow. It is not connected to a real canteen system.</p></section>
+  </main>
+  <footer class="footer"><span>QueueLess · Startup concept prototype</span><span>All queue and availability data is illustrative.</span></footer>
+  <script src="scripts/data.js"></script><script src="scripts/store.js"></script><script src="scripts/operator.js"></script>
+</body>
+</html>
